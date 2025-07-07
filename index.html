@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PatchedStuffBot WebApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #00ffd0;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .section h2 {
+      border-left: 4px solid #00ffd0;
+      padding-left: 10px;
+    }
+    .card {
+      background: #1a1a1a;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 10px 0;
+      box-shadow: 0 0 10px rgba(0,255,208,0.2);
+    }
+    .btn {
+      background: #00ffd0;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 6px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>PatchedStuffBot WebApp</h1>
+
+  <div class="section">
+    <h2>🔧 Tools</h2>
+    <div class="card">
+      <p>Cracked VPN Tool</p>
+      <button class="btn" onclick="select('vpn_tool')">Access</button>
+    </div>
+    <div class="card">
+      <p>Premium App Unlocker</p>
+      <button class="btn" onclick="select('unlocker')">Access</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🛍️ Store</h2>
+    <div class="card">
+      <p>Telegram Member Adder Script</p>
+      <button class="btn" onclick="select('member_adder')">Buy</button>
+    </div>
+    <div class="card">
+      <p>Custom Bot Template</p>
+      <button class="btn" onclick="select('bot_template')">Buy</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>💰 Earning</h2>
+    <div class="card">
+      <p>Daily Loot & Rewards</p>
+      <button class="btn" onclick="select('loot')">Start</button>
+    </div>
+    <div class="card">
+      <p>Refer & Earn System</p>
+      <button class="btn" onclick="select('refer_earn')">Start</button>
+    </div>
+  </div>
+
+  <script>
+    const tg = window.Telegram.WebApp;
+    tg.expand(); // make full screen
+
+    function select(item) {
+      tg.sendData(item); // send back to bot
+      alert("Selected: " + item);
+    }
+  </script>
+</body>
+</html>
